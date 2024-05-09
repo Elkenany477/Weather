@@ -11,6 +11,7 @@ import {
     Dimensions,
     TextInput,
     FlatList,
+    SectionList
 } from 'react-native';
 
 // LogBox.ignoreAllLogs();
@@ -19,7 +20,7 @@ const { width, Height } = Dimensions.get('window');
 import { useNavigation } from '@react-navigation/native';
 import { GlobalStyle } from '../Src/Styles/Constants';
 import { useSelector, useDispatch } from 'react-redux';
-import { setSearchQuery } from '../Redux/Actions/ActionFun';
+import { setSearchQuery, fetchDataSuccess } from '../Redux/Actions/ActionFun';
 import { fetchData } from '../Redux/Actions/DataMiddleware'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import Feather from 'react-native-vector-icons/Feather'
@@ -29,13 +30,14 @@ import Ionicons from 'react-native-vector-icons/Ionicons'
 
 const Search_Screen = () => {
 
+    const Navigation = useNavigation()
+
 
     const Data = useSelector(state => state.data.data);
-    console.log(Data);
     const loading = useSelector(state => state.data.loading);
     const error = useSelector(state => state.data.error);
     const searchQuery = useSelector(state => state.data.searchQuery);
-
+    const FilteredData = useSelector(state => state.data.data)
     const dispatch = useDispatch();
 
     React.useEffect(() => {
@@ -44,18 +46,8 @@ const Search_Screen = () => {
 
     const HandleSearch = (Query) => {
         dispatch(setSearchQuery(Query))
-        dispatch(fetchData)
     }
 
-    const Datalist = ({ info }) => {
-        const Datlist = info;
-        console.log(Datlist)
-        return (
-            <View style={Styles.Datalist}>
-
-            </View>
-        )
-    }
 
 
     return (
@@ -72,8 +64,61 @@ const Search_Screen = () => {
             </View>
             <FlatList
                 data={Data}
-                keyExtractor={(item) => item.id.toString()}
-                renderItem={(item, index) => <Datalist indx={index} info={item} />}
+                keyExtractor={(item) => item.id}
+                renderItem={({ item }) => (
+                    searchQuery != "" ? (
+                        <FlatList data={item.Cites.filter(city => city.Govrn_Code == searchQuery)}
+                            keyExtractor={(item) => item.City_Id}
+                            renderItem={({ item: city, index }) => (
+
+                                <TouchableOpacity onPress={() => {
+                                    Navigation.navigate("City", {
+                                        Data: city
+                                    })
+                                }} style={{
+                                    width: "95%",
+                                    height: 50,
+                                    marginTop: 10,
+                                    backgroundColor: "#E7EFF2",
+                                    alignSelf: "center",
+                                    marginLeft: 15,
+                                    justifyContent: "center",
+                                    alignItems: "center"
+                                }}>
+                                    <Text style={{ fontSize: 18, color: "#000", fontWeight: 'bold' }}>{city.City_Nam}</Text>
+                                </TouchableOpacity>
+
+
+                            )}
+                        />
+                    ) : (
+                        <FlatList data={item.Cites}
+                            keyExtractor={(item) => item.City_Id}
+                            renderItem={({ item: city, index }) => (
+
+                                <TouchableOpacity onPress={() => {
+                                    Navigation.navigate("City", {
+                                        Data: city
+                                    })
+                                }} style={{
+                                    width: "95%",
+                                    height: 50,
+                                    marginTop: 10,
+                                    backgroundColor: "#E7EFF2",
+                                    alignSelf: "center",
+                                    marginLeft: 15,
+                                    justifyContent: "center",
+                                    alignItems: "center"
+                                }}>
+                                    <Text style={{ fontSize: 18, color: "#000", fontWeight: 'bold' }}>{city.City_Nam}</Text>
+                                </TouchableOpacity>
+
+
+                            )}
+                        />
+                    )
+
+                )}
             />
         </View >
     )
@@ -103,9 +148,12 @@ const Styles = StyleSheet.create({
         color: "#eee"
     },
     Datalist: {
-        width: "80%",
-        height: 60,
-        backgroundColor: "#E7EFF2"
+        width: "95%",
+        height: 90,
+        backgroundColor: "#ff0fff",
+        marginVertical: 15,
+        alignSelf: "center"
+        //#E7EFF2
     }
 })
 

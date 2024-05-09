@@ -30,4 +30,9 @@ export const GlobalStyle = StyleSheet.create({
 
         alignSelf: "center"
     }
-}) 
+})
+
+export const LocalImage = {
+    Sunny: require('../assest/Img/sun.png'),
+    Rainy: require('../assest/Img/heavyrain.png')
+}

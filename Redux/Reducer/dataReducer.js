@@ -2,6 +2,7 @@ import { FETCH_DATA_REQUEST, FETCH_DATA_SUCCESS, FETCH_DATA_FAILURE, SET_SEARCH_
 
 const initialState = {
     data: [],
+    FilteredData: [],
     loading: false,
     error: null,
     searchQuery: ""
@@ -20,6 +21,7 @@ const dataReducer = (state = initialState, action) => {
                 ...state,
                 loading: false,
                 data: action.payload,
+                FilteredData: action.payload,
                 error: null
             };
         case FETCH_DATA_FAILURE:

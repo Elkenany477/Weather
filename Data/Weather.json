@@ -2,37 +2,34 @@
     {
         "id": "1",
         "Goverment_Name": "محافظة الغربية",
-        "Govrn_Code": "040",
+        
         "Cites": [
             {
                 "City_Id": "1",
+                "Govrn_Code": "040",
                 "City_Nam": "زفتى",
-                "condition": {
-                    "text": "Sunny",
-                    "icon": "require('')"
-                },
+                "text": "Sunny",
+                "icon": "Sunny",
                 "Storm_Dir": "30 km",
                 "wind_degree": 30,
                 "Sun_Time": "11:30 AM"
             },
             {
                 "City_Id": "2",
+                "Govrn_Code": "040",
                 "City_Nam": "طنطا",
-                "condition": {
-                    "text": "Rainny",
-                    "icon": "require('')"
-                },
+                "text": "Rainny",
+                "icon": "Rainy",
                 "Storm_Dir": "29 km",
                 "wind_degree": 12,
                 "Sun_Time": "8:12 AM"
             },
             {
                 "City_Id": "3",
+                "Govrn_Code": "040",
                 "City_Nam": "السنطة",
-                "condition": {
-                    "text": "Cloudy",
-                    "icon": "require('')"
-                },
+                "text": "Cloudy",
+                "icon": "",
                 "Storm_Dir": "20 km",
                 "wind_degree": 22,
                 "Sun_Time": "7:59 AM"
@@ -47,33 +44,30 @@
         "Cites": [
             {
                 "City_Id": "1",
+                "Govrn_Code": "048",
                 "City_Nam": "شبين الكوم",
-                "condition": {
-                    "text": "Heavy Rain",
-                    "icon": "require('')"
-                },
+                "text": "Heavy Rain",
+                "icon": "",
                 "Storm_Dir": "21 km",
                 "wind_degree": 10,
                 "Sun_Time": "6:30 AM"
             },
             {
                 "City_Id": "2",
+                "Govrn_Code": "048",
                 "City_Nam": "قويسنا",
-                "condition": {
-                    "text": "Light Rain",
-                    "icon": "require('')"
-                },
+                "text": "Light Rain",
+                "icon": "",
                 "Storm_Dir": "53 km",
                 "wind_degree": 17,
                 "Sun_Time": "9:45 AM"
             },
             {
                 "City_Id": "3",
+                "Govrn_Code": "048",
                 "City_Nam": "بركة السبع",
-                "condition": {
-                    "text": "Partly Cloud",
-                    "icon": "require('')"
-                },
+                "text": "Partly Cloud",
+                "icon": "",
                 "Storm_Dir": "35 km",
                 "wind_degree": 24,
                 "Sun_Time": "7:30 AM"
@@ -84,37 +78,34 @@
     {
         "id": "3",
         "Goverment_Name": "محافظة القليوبية",
-        "Govrn_Code": "013",
+        
         "Cites": [
             {
                "City_Id": "1",
+               "Govrn_Code": "013",
                 "City_Nam": "الخصوص",
-                "condition": {
-                    "text": "Sunny",
-                    "icon": "require('')"
-                },
+                "text": "Sunny",
+                "icon": "",
                 "Storm_Dir": "28 km",
                 "wind_degree": 29,
                 "Sun_Time": "11:54 AM"
             },
             {
                 "City_Id": "2",
+                "Govrn_Code": "013",
                 "City_Nam": "شبرا الخيمة",
-                "condition": {
-                    "text": "Windy",
-                    "icon": "require('')"
-                },
+                "text": "Windy",
+                "icon": "",
                 "Storm_Dir": "26 km",
                 "wind_degree": 14,
                 "Sun_Time": "10:00 AM"
             },
             {
                 "City_Id": "3",
+                "Govrn_Code": "013",
                 "City_Nam": "طوخ",
-                "condition": {
-                    "text": "Stormy",
-                    "icon": "require('')"
-                },
+                "text": "Stormy",
+                "icon": "",
                 "Storm_Dir": "19 km",
                 "wind_degree": 20,
                 "Sun_Time": "7:05 AM"
@@ -125,37 +116,33 @@
     {
         "id": "4",
         "Goverment_Name": "محافظة الاسكندرية",
-        "Govrn_Code": "03",
         "Cites": [
             {
                 "City_Id": "1",
+                "Govrn_Code": "03",
                 "City_Nam": "ابو قير",
-                "condition": {
-                    "text": "Light Rain",
-                    "icon": "require('')"
-                },
+                "text": "Light Rain",
+                "icon": "",
                 "Storm_Dir": "45 km",
                 "wind_degree": 20,
                 "Sun_Time": "11:20 AM"
             },
             {
                 "City_Id": "2",
+                "Govrn_Code": "03",
                 "City_Nam": "العجمى",
-                "condition": {
-                    "text": "Partly Cloud",
-                    "icon": "require('')"
-                },
+                "text": "Partly Cloud",
+                "icon": "",
                 "Storm_Dir": "32 km",
                 "wind_degree": 24,
                 "Sun_Time": "9:30 AM"
             },
             {
                "City_Id": "3",
+               "Govrn_Code": "03",
                 "City_Nam": "الابراهيمية",
-                "condition": {
-                    "text": "Very Sunny",
-                    "icon": "require('')"
-                },
+                "text": "Very Sunny",
+                "icon": "",
                 "Storm_Dir": "27 km",
                 "wind_degree": 44,
                 "Sun_Time": "6:05 AM"
@@ -166,37 +153,33 @@
     {
         "id": "5",
         "Goverment_Name": "محافظة الشرقية",
-        "Govrn_Code": "055",
         "Cites": [
             {
                 "City_Id": "1",
+                "Govrn_Code": "055",
                 "City_Nam": "الزقازيق",
-                "condition": {
-                    "text": "Sunny",
-                    "icon": "require('')"
-                },
+                "text": "Sunny",
+                "icon": "",
                 "Storm_Dir": "15 km",
                 "wind_degree": 40,
                 "Sun_Time": "8:15 AM"
             },
             {
-                "City_Id": "1",
+                "City_Id": "2",
+                "Govrn_Code": "055",
                 "City_Nam": "فاقوس",
-                "condition": {
-                    "text": "Lightly",
-                    "icon": "require('')"
-                },
+                "text": "Lightly",
+                "icon": "",
                 "Storm_Dir": "43 km",
                 "wind_degree": 30,
                 "Sun_Time": "10:45 AM"
             },
             {
-                "City_Id": "1",
+                "City_Id": "3",
+                "Govrn_Code": "055",
                 "City_Nam": "بلبيس",
-                "condition": {
-                    "text": "Very Sunny",
-                    "icon": "require('')"
-                },
+                "text": "Very Sunny",
+                "icon": "",
                 "Storm_Dir": "17 km",
                 "wind_degree": 45,
                 "Sun_Time": "3:05 AM"

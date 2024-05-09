@@ -24,6 +24,7 @@ import { Provider } from 'react-redux';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
 import Search_Screen from './Component/SaerchRendr';
+import City_Weather from './Component/City_Weather';
 
 const Stack = createStackNavigator();
 
@@ -41,6 +42,7 @@ const App = () => {
           />
           <Stack.Screen name="Home" component={Home_Screen} />
           <Stack.Screen name="Search" component={Search_Screen} />
+          <Stack.Screen name="City" component={City_Weather} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>
