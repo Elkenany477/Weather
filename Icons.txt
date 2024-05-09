@@ -1,0 +1,3 @@
+Cart Icon --> "cart"
+Back Icon --> "chevron-left"
+Heart Icon --> "heart-outline"
